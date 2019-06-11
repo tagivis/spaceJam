@@ -10,6 +10,10 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 
+
+
+
+
 const useStyles = makeStyles({
     card: {
         maxWidth: 345,
@@ -21,15 +25,15 @@ const useStyles = makeStyles({
 
 
 
-const TodayPicComponent = ({
+const BlueMarbleComponent = ({
     key,
     id,
-    date,
-    explanation,
-    hdurl,
-    media_type,
-    title,
-    url 
+    year,
+    month,
+    day,
+    image,
+    urlImage
+    
 }) => {
 
     
@@ -40,15 +44,15 @@ const TodayPicComponent = ({
         <CardActionArea>
         <CardMedia
             className={classes.media}
-            image= {url}
-            title={title}
+            image= {urlImage}
+            title={id}
         />
         <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-            {title}
+            {id}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-            {explanation}
+            {id}
             </Typography>
         </CardContent>
         </CardActionArea>
@@ -66,4 +70,4 @@ const TodayPicComponent = ({
 
 
 }
-export default TodayPicComponent
+export default BlueMarbleComponent

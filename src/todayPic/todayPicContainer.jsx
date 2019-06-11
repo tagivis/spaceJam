@@ -45,7 +45,7 @@ class TodayPicContainer extends Component{
 
     render()
     {
-        console.log("Pictures", this.state.dayPicture);
+        //console.log("Pictures", this.state.dayPicture);
         return(        
             <>
                 <TodayPicComponent
