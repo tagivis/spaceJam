@@ -1,6 +1,7 @@
 import  React, {Component} from "react";
 import  axios  from "axios";
 import BlueMarbleComponent from "./blueMarbleComponent";
+import childCarouselComponent from "../childCarousel/childCarouselComponent";
 
 
 const urlEpic='https://epic.gsfc.nasa.gov/api/natural'
@@ -41,19 +42,21 @@ class BlueMarbleContainer extends Component{
         return(        
             <>
             {
-                this.state.blueMarblePics.map(blueMarblePic => {
+                this.state.blueMarblePics.map((blueMarblePic, index) => {
                     return(
-                    <BlueMarbleComponent
-                        key={blueMarblePic.identifier}
-                        id={blueMarblePic.identifier}
-                        year ={blueMarblePic.identifier.substr(0,4)}
-                        month={blueMarblePic.identifier.substr(4,2)}
-                        day={blueMarblePic.identifier.substr(6,2)}                        
-                        image= {blueMarblePic.image}
-                        urlImage={urlEpicPics+blueMarblePic.identifier.substr(0,4)+'/'+
-                        blueMarblePic.identifier.substr(4,2)+'/'+
-                        blueMarblePic.identifier.substr(6,2)+'/png/'+blueMarblePic.image+'.png'}
-                        />)
+                    // <BlueMarbleComponent
+                        
+                    //     id={blueMarblePic.identifier}
+                    //     year ={blueMarblePic.identifier.substr(0,4)}
+                    //     month={blueMarblePic.identifier.substr(4,2)}
+                    //     day={blueMarblePic.identifier.substr(6,2)}                        
+                    //     image= {blueMarblePic.image}
+                    //     urlImage={urlEpicPics+blueMarblePic.identifier.substr(0,4)+'/'+
+                    //     blueMarblePic.identifier.substr(4,2)+'/'+
+                    //     blueMarblePic.identifier.substr(6,2)+'/png/'+blueMarblePic.image+'.png'}
+                    //     />
+                    <childCarouselComponent {...blueMarblePic}/>
+                        )
                 })
             }
             </>
