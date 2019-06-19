@@ -9,10 +9,14 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
+import './todayPic.css';
 
 const useStyles = makeStyles({
     card: {
-        maxWidth: 345,
+        maxWidth: 500,
+        paddingLeft: 10,
+        paddingRight:10,
+        paddingTop: 10,
     },
     media: {
         height: 140,
