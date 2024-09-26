@@ -1,15 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import TodayPicContainer from './todayPic/todayPicContainer';
+import CarouselContainer from './carousel/carouserlContainer';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-          <TodayPicContainer/>
+      <header className="App-header">          
       </header>
-    
+      <div> 
+          <TodayPicContainer/>
+          <div className="blueMarbleContainer">
+            <CarouselContainer/>
+          </div>
+
+        
+      </div>
     </div>
   );
 }

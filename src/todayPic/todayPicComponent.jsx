@@ -35,7 +35,7 @@ const TodayPicComponent = ({
     
     const classes = useStyles();
     return (
-
+        <>
     <Card className={classes.card}>
         <CardActionArea>
         <CardMedia
@@ -58,6 +58,9 @@ const TodayPicComponent = ({
         </Button>        
         </CardActions>
     </Card>
+        
+    </>
+
     );
 
 
